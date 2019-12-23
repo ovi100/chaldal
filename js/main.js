@@ -17,9 +17,15 @@ $(document).ready(function() {
   //   }
   // });
 
-    $('.sidenav').click(function() {
+    $('.sidenav-toggle-btn').click(function() {
         /* Act on the event */
-        $('#menu-sidenav').toggleClass('show-sidemenu');
+        $('#sideNav').toggleClass('show-sidemenu');
+        $('#main-content').toggleClass('toggle-main-content');
+    });
+
+    $('.sideNav-overlay').click(function() {
+        /* Act on the event */
+        $('#sideNav').removeClass('show-sidemenu');
     });
 
     /*
@@ -56,53 +62,11 @@ $(document).ready(function() {
 
     /*
         * ----------------------------------------------
-        *--------------Home Product Slider--------------
-        * ----------------------------------------------
-    */
-
-    $('.hp-slider').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        navText: ['<i class="icofont-thin-left"></i>','<i class="icofont-thin-right"></i>'],
-        responsive:{
-            0:{
-              items:2
-            },
-            600:{
-              items:2
-            },
-            768:{
-              items:4
-            },
-            1000:{
-              items:6
-            }
-        }
-    });
-
-    /*
-        * ----------------------------------------------
-        *------------Product Details Slider-------------
-        * ----------------------------------------------
-    */
-
-    $('.pd-slider').owlCarousel({
-        center: true,
-        loop:true,
-        items:1,
-        margin:10,
-        nav:true,
-        navText: ['<i class="icofont-thin-left"></i>','<i class="icofont-thin-right"></i>']
-    });
-
-    /*
-        * ----------------------------------------------
         *------------Related Product Slider-------------
         * ----------------------------------------------
     */
 
-    $('.rp-slider').owlCarousel({
+    /*$('.rp-slider').owlCarousel({
         loop:true,
         margin:10,
         dots: true,
@@ -122,7 +86,7 @@ $(document).ready(function() {
               items:4
             }
         }
-    });
+    });*/
 
     /*
     * -----------------------------------------------------------------

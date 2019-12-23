@@ -247,169 +247,164 @@ a:hover, a:visited, a:focus {
 // ********************************
 
 // CSS For Layout Page
-
-.menu-sidenav {
+.sideNav{
 	position: fixed;
-	top: 72px;
-    left: -280px;
+	top: 50px;
+    left: 0;
+    width: 0;;
     height: 100%;
-    width: 275px;
-    background: #eee;
-    overflow-x: hidden;
-    z-index: 55;
+    z-index: 10;
     @include transition(all,.4s,ease);
+	.menu-sidenav {
+		position: fixed;
+		
+	    height: 100%;
+	    width: 270px;
+	    background: $wcolor;
+	    overflow-x: hidden;
+	    z-index: 55;
+	    @include transition(all,.4s,ease);
 
-    .sidenav-menu-link{
-	    padding-top: 30px;
-	    padding-left: 20px;
-	    padding-right: 20px;
+	    .sidenav-menu-link{
+		    padding-top: 15px;
 
-	    ul li{margin-bottom: 20px;}
+		    ul li{
+		    	margin-bottom: 10px;
+		    	padding: 0 25px;
+		    }
 
-	    a{
-	    	color: $bcolor;
-	    	text-transform: capitalize;
-	    	@include transition(all,.4s,ease);
+		    a{
+		    	color: $bcolor;
+		    	text-transform: capitalize;
+		    	@include transition(all,.4s,ease);
 
-	    	&:hover{color: $brand-color;}
+		    	&:hover{color: $brand-color;}
 
-	    	span{
-	    		color: $bcolor;
-	    		float: right;
-				font-size: 20px;
-				font-weight: 600;
-				line-height: 16px;
-				text-align: center;
-	    	}
-	    }
+		    	span{
+		    		color: $bcolor;
+		    		float: right;
+					font-size: 20px;
+					font-weight: 600;
+					line-height: 16px;
+					text-align: center;
+		    	}
+		    }
 
-	    #second-category{margin: 25px;}
+		    #second-category{
+		    	margin: 10px;
+			    border-left: 1px solid #ddd;
+		    }
 
-	    #third-category{margin: 25px;}
+		    #third-category{
+		    	margin: 10px;
+			    border-left: 1px solid #ddd;
+		    }
+		}
+
+	    hr{border-top: 1px solid #ddd;}
+
+	    .sidenav-menu-account{
+		    padding-top: 30px;
+		    padding-left: 20px;
+		    padding-right: 20px;
+
+		    ul li{margin-bottom: 25px;}
+
+		    a{
+		    	color: $bcolor;
+		    	text-transform: capitalize;
+		    	@include transition(all,.4s,ease);
+
+		    	&:hover{color: #757575;}
+		    }
+		}
+
+		.sidenav-menu-social{
+		    padding-top: 30px;
+		    padding-left: 20px;
+		    padding-right: 20px;
+
+		    ul li{
+		    	margin-bottom: 25px;
+		    	float: left;
+		    }
+
+		    a{
+		    	color: $bcolor;
+		    	font-size: 22px;
+	    	    margin-right: 20px;
+		    	text-transform: capitalize;
+		    	@include transition(all,.4s,ease);
+
+		    	&:hover{color: #757575;}
+		    }
+		}
 	}
-
-    hr{border-top: 1px solid #ddd;}
-
-    .sidenav-menu-account{
-	    padding-top: 30px;
-	    padding-left: 20px;
-	    padding-right: 20px;
-
-	    ul li{margin-bottom: 25px;}
-
-	    a{
-	    	color: $bcolor;
-	    	text-transform: capitalize;
-	    	@include transition(all,.4s,ease);
-
-	    	&:hover{color: #757575;}
-	    }
-	}
-
-	.sidenav-menu-social{
-	    padding-top: 30px;
-	    padding-left: 20px;
-	    padding-right: 20px;
-
-	    ul li{
-	    	margin-bottom: 25px;
-	    	float: left;
-	    }
-
-	    a{
-	    	color: $bcolor;
-	    	font-size: 22px;
-    	    margin-right: 20px;
-	    	text-transform: capitalize;
-	    	@include transition(all,.4s,ease);
-
-	    	&:hover{color: #757575;}
-	    }
+	.sideNav-overlay{
+		position: fixed;
+	    width: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.5);
+	    opacity: 0;
 	}
 }
 
 .show-sidemenu{
-	left: 0 !important;
+	left: -400px;
+	@include transition(all,.4s,ease);
+}
+
+.toggle-main-content{
+	margin-left: 0 !important;
 	@include transition(all,.4s,ease);
 }
 
 .header{
 
-	.top-nav{
-		height: 50px;
-	    line-height: 40px;
-		text-align: right;
-    	ul{
-		    display: inline-block;
-	        margin-top: 7px;
-
-    		li{
-			    display: inline-block;
-			    &:after{
-			    	content: '';
-			    	width: 2px;
-				    height: 25px;
-				    background: #ddd;
-				    position: absolute;
-				    top: 15px;
-			    }
-			    a{
-			    	color: #747474;
-				    font-size: 12px;
-		    	    padding: 10px 20px;
-		    	    text-transform:capitalize;
-					
-					span{
-						color:#ff0000;
-						font-size:11px;
-					}
-
-		    	    sub{
-		    	    	top: 11px;
-					    left: -8px;
-					    font-size: 14px;
-		    	    }
-
-		    	    &:hover{
-		    	    	color:$brand-color;
-		    	    	@include transition(all,.6s,ease);
-		    	    }
-			    }
-    		}
-    	}
-	}
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: #42c5bb;
+    z-index: 30;
 
 	.action-bar{
-		border-bottom: 1px solid #eee;
-		padding: 15px 0;
+		.sidenav-toggle-btn{
+			cursor: pointer;
+			margin-top: 15px;
+			span{
+				background: $bcolor;
+				width: 25px;
+			    height: 2px;
+			    display: block;
+			    margin-top: 5px;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		}
+
+		.logo {margin-top: 5px;}
 
 		.searchbox{
-
+			margin-top: 5px;
 			.input-group{
 
 	    		.form-control{
 	    			height: 40px;
-	    			border-left: 0;
 	    			border-right: 0;
-	    			box-shadow: none;
+	    			@include box-shadow(none);
 	    			&:focus{
 	    				border-color: #ccc;
 	    			}
 	    		}
 
-	    		.input-group-addon:first-child{
-	    			background: transparent;
-	    			border-radius: 0;
+	    		.input-group-addon{
+	    			background: $wcolor;
 	    			padding: 0;
 	    			button{color: #afafaf;}
 	    		}
 
-	    		.input-group-addon:not(:first-child){
-		    		background:$brand-color;
-		    		border: 1px solid $brand-color;
-		    		border-radius: 0;
-		    		padding: 0;
-		    	}
 		    	button{
 	    			background: transparent;
 	    			border: 0;
@@ -425,260 +420,43 @@ a:hover, a:visited, a:focus {
 	    	}
 		}
 
-		.action-icon{
-			text-align: right;
+		.action-icon{}
+
+		.user-account{
 			ul{
+				margin-bottom: 0;
 				li{
-					display: inline-block;
-					margin-left: 35px;
-					.cart-icon{
-						width: 70px;
-					    height: 45px;
-					    background: $brand-color;
-					    border-radius: 4px;
-					    line-height: 40px;
-					    text-align: center;
-						a{
-							color: $wcolor;
-		    				font-size: 23px;
-
-						    &:hover{
-				    	    	color: $wcolor;
-				    	    	@include transition(all,.6s,ease);
-				    	    }
-		    			}
-		    			span{
-						    color: $wcolor;
-						    font-size: 18px;
-						}
-					}
-					.cart-text{
-						a{
-							color: #000;
-						    font-size: 14px;
-						    text-decoration: underline;
-						}
-					}
+					
+				    height: 50px;
+				    background: $wcolor;
+				    display: inline-block;
+				    line-height: 50px;
+				    padding: 0 10px;
+				    text-transform: capitalize;
 				}
-			}
-
-			.dropdown-menu{
-				left: 10px;
-				border-radius: 0;
-			    border: 0;
-			    min-width: 90px;
-
-			    li a{font-size: 15px;}
-			}
-			.cart-items-holder {
-			    position: absolute;
-			    top: 43px;
-			    left: 5px;
-			    width: 95%;
-			    background: $wcolor;
-			    border: 1px solid #ccc;
-			    display: none;
-			    padding: 10px;
-			    z-index: 10;
-    
-			    .visible-xs{
-			    	span{
-			    		background: $wcolor;
-					    display: inline-block;
-					    font-size: 13px;
-					    margin-top: 10px;
-					    margin-bottom: 10px;
-					    padding: 5px;
-
-					    &:before{
-					    	content: '';
-					    	width: 90%;
-						    height: 1px;
-						    background: #ccc;
-						    position: absolute;
-						    top: 115px;
-						    left: 12px;
-						    z-index: -1;
-					    }
-			    	}
-			    }
-			    .cart-item{
-			    	max-height: 205px;
-				    overflow-y: auto;
-				    overflow-x: hidden;
-			    	.item{
-			    		border-bottom: 1px solid #ddd;
-			    		margin-bottom: 10px;
-					    padding-bottom: 8px;
-			    		a{color: $bcolor;}
-			    		.cart-action{
-			    			a{
-			    				background: $wcolor;
-							    border: 1px solid #ccc;
-							    padding: 5px;
-							    text-transform: capitalize;
-			    			}
-			    		}
-			    	}
-			    }
-			    .subtotal{
-			    	border-bottom: 1px solid #ddd;
-				    margin-bottom: 10px;
-				    margin: 0 0 10px;
-			    }
-
-			    &:hover{
-					display: block;
-				}
-			}
-
-			&:hover{
-				.cart-items-holder{display: block;}
 			}
 		}
+    }
+}
 
-		#msearchbox{
-			margin-top: 25px;
+.main-content{
+	margin-left: 270px;
+	padding-top: 50px;
+	@include transition(all,.4s,ease);
 
-			.input-group{
-
-	    		.form-control{
-	    			height: 45px;
-	    			border-right: 0;
-	    			border-radius: 0;
-	    			box-shadow: none;
-
-	    			@include placeholder(){
-	    				font-size: 13px;
-	    			}
-	    		}
-
-	    		.input-group-addon{
-	    			background: #d2d2d2;
-	    			border-radius: 0;
-		    		button{
-		    			background: transparent;
-		    			border: 0;
-		    			color: $bcolor;
-					    font-size: 13px;
-					    padding: 0 10px;
-		    		}
-		    	}
-	    	}
+	#homeCarousel{
+		.carousel-control{
+			top: 45%;
+			width: 40px;
+		    height: 60px;
+			background-image: none;
+			color: $bcolor;
+			font-size: 40px;
+		    @include opacity(1);		    
 		}
-    }
-
-    .main-nav{
-    	height: 50px;
-    	background:$wcolor;
-		border-bottom: 1px solid #eee;
-    	.mainnav-wrapper{
-    		text-align: center;
-
-	    	ul{
-	    		li:first-child{
-	    			a{padding-left:0;}
-	    		}
-
-	    		li{
-    			    display: inline-block;
-    			    margin-right: 50px;
-
-    			    a{
-    			    	color:$bcolor;
-    			    	cursor:pointer;
-    			    	font-size: 13px;
-			    	    text-transform: uppercase;
-
-			    	    .link-hover{
-			    	    	width: 0;
-						    height: 1px;
-						    display: block;
-						    background: #000;
-			    	    }
-
-			    	    &:hover{
-			    	    	color:$brand-color;
-			    	    	@include transition(all,.3s,ease);
-			    	    	.link-hover{
-			    	    		width: 100%;
-			    	    		@include transition(all,.5s,ease);
-			    	    	}
-			    	    }
-    			    }
-	    		}
-	    	}
-
-	    	.mega-dropdown{
-	    		padding: 15px;
-		    	.mega-dropdown-content{
-					width: 80%;
-				    position: absolute;
-				    left: 105px;
-				    top: 183px;
-				    background: #f7f7f7;
-				    border: 1px solid #f7f7f7;
-				    border-radius: 0;
-				    box-shadow: none;
-			        padding: 15px 0;
-				    text-align: left;
-				    visibility: hidden;
-				    z-index: 100;
-
-				    .submenu-header{
-				    	font-size: 12px;
-					    font-weight: 700;
-					    text-transform: uppercase;
-				    }
-
-				    .submenu-list{
-			    	    li{
-			    	    	display: block;
-			    	    	margin-bottom: 10px;
-			    	    	a{
-			    	    		color: #383838;
-			    	    		font-size: 13px;
-			    	    		text-transform: capitalize;
-			    	    	}
-			    	    }
-				    }
-				}
-
-				&:hover{
-					background: #f7f7f7;
-					border-top: 2px solid $brand-color;
-					box-shadow: 0 0 2px #ddd;
-					padding: 13px 15px;
-					.mega-dropdown-content{
-					    visibility: visible;
-					}
-	    	    }
-			}
-    	}
-    }
-
-    .fixed-nav{
-    	position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    z-index: 30;
-
- 		.mainnav-wrapper{
- 			.mega-dropdown{
- 				.mega-dropdown-content{
-			    	top: 80px;
-				}
-
-				&:hover{
-					.mega-dropdown-content{
-						top: 50px;
-						@include transition(all,.6s,ease);
-					}
-	    	    }
- 			}
- 		}
-    }
+		.left{left: 0;}
+		.right{right: 0;}
+	}
 }
 
 footer{
