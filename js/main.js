@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('.sidenav-toggle-btn').click(function() {
         /* Act on the event */
         $('#sideNav').toggleClass('show-sidemenu');
-        $('#main-content').toggleClass('toggle-main-content');
+        $('.site-wrapper').toggleClass('toggle-content');
     });
 
     $('.sideNav-overlay').click(function() {

@@ -354,128 +354,141 @@ a:hover, a:visited, a:focus {
 	@include transition(all,.4s,ease);
 }
 
-.toggle-main-content{
-	margin-left: 0 !important;
+.toggle-content{
+	.left-content{
+		width: 0 !important;
+	    float: none !important;
+	    .sideNav{
+	    	left: -300px !important;
+		    width: 0 !important;
+	    }
+	}
+	.right-content{
+		width: 100% !important;
+	    float: none !important;
+	}
 	@include transition(all,.4s,ease);
 }
 
 .site-wrapper{
 	padding-top: 50px;
-	.sideNav {
-	    position: fixed;
-	    top: 50px;
+	.header{
+		position: fixed;
+	    top: 0;
 	    left: 0;
-	    width: 240px;
-	    height: 100%;
-	    border-right: 1px solid #ddd;
-	    z-index: 10;
+	    height: 50px;
+	    width: 100%;
+	    background: #42c5bb;
+	    z-index: 30;
 
-	    .menu-sidenav{
-	    	position: unset;
-		    height: 100%;
-		    width: 100%;
-	    }
-    }
-}
-
-.header{
-
-	position: fixed;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background: #42c5bb;
-    z-index: 30;
-
-	.action-bar{
-		.sidenav-toggle-btn{
-			cursor: pointer;
-			margin-top: 15px;
-			span{
-				background: $bcolor;
-				width: 25px;
-			    height: 2px;
-			    display: block;
-			    margin-top: 5px;
-			    margin-left: auto;
-			    margin-right: auto;
-			}
-		}
-
-		.logo {margin-top: 5px;}
-
-		.searchbox{
-			margin-top: 5px;
-			.input-group{
-
-	    		.form-control{
-	    			height: 40px;
-	    			border-right: 0;
-	    			@include box-shadow(none);
-	    			&:focus{
-	    				border-color: #ccc;
-	    			}
-	    		}
-
-	    		.input-group-addon{
-	    			background: $wcolor;
-	    			padding: 0;
-	    			button{color: #afafaf;}
-	    		}
-
-		    	button{
-	    			background: transparent;
-	    			border: 0;
-	    			color: $bcolor;
-				    font-size: 15px;
-				    padding: 0 10px;
-
-				    &:hover{
-		    	    	color:$brand-color;
-		    	    	@include transition(all,.6s,ease);
-		    	    }
-	    		}
-	    	}
-		}
-
-		.action-icon{}
-
-		.user-account{
-			ul{
-				margin-bottom: 0;
-				li{
-					
-				    height: 50px;
-				    background: $wcolor;
-				    display: inline-block;
-				    line-height: 50px;
-				    padding: 0 10px;
-				    text-transform: capitalize;
+		.action-bar{
+			.sidenav-toggle-btn{
+				cursor: pointer;
+				margin-top: 15px;
+				span{
+					background: $bcolor;
+					width: 25px;
+				    height: 2px;
+				    display: block;
+				    margin-top: 5px;
+				    margin-left: auto;
+				    margin-right: auto;
 				}
 			}
-		}
-    }
-}
 
-.main-content{
-	// margin-left: 270px;
-	// padding-top: 50px;
-	@include transition(all,.4s,ease);
+			.logo {margin-top: 5px;}
 
-	#homeCarousel{
-		.carousel-control{
-			top: 45%;
-			width: 40px;
-		    height: 60px;
-			background-image: none;
-			color: $bcolor;
-			font-size: 40px;
-		    @include opacity(1);		    
-		}
-		.left{left: 0;}
-		.right{right: 0;}
+			.searchbox{
+				margin-top: 5px;
+				.input-group{
+
+		    		.form-control{
+		    			height: 40px;
+		    			border-right: 0;
+		    			@include box-shadow(none);
+		    			&:focus{
+		    				border-color: #ccc;
+		    			}
+		    		}
+
+		    		.input-group-addon{
+		    			background: $wcolor;
+		    			padding: 0;
+		    			button{color: #afafaf;}
+		    		}
+
+			    	button{
+		    			background: transparent;
+		    			border: 0;
+		    			color: $bcolor;
+					    font-size: 15px;
+					    padding: 0 10px;
+
+					    &:hover{
+			    	    	color:$brand-color;
+			    	    	@include transition(all,.6s,ease);
+			    	    }
+		    		}
+		    	}
+			}
+
+			.action-icon{}
+
+			.user-account{
+				ul{
+					margin-bottom: 0;
+					li{
+						
+					    height: 50px;
+					    background: $wcolor;
+					    display: inline-block;
+					    line-height: 50px;
+					    padding: 0 10px;
+					    text-transform: capitalize;
+					}
+				}
+			}
+	    }
 	}
+	.left-content{
+		width: 17%;
+	    float: left;
+
+	    .sideNav{
+		    position: fixed;
+		    left: 0;
+		    width: 232px;
+		    height: 100%;
+		    border-right: 1px solid #ddd;
+		    z-index: 10;
+
+		    .menu-sidenav{
+		    	position: unset;
+			    height: 100%;
+			    width: 100%;
+		    }
+	    }
+	}
+	.right-content{
+		width: 83%;
+	    float: right;
+	    @include transition(all,.4s,ease);
+
+		#homeCarousel{
+			.carousel-control{
+				top: 45%;
+				width: 40px;
+			    height: 60px;
+				background-image: none;
+				color: $bcolor;
+				font-size: 40px;
+			    @include opacity(1);		    
+			}
+			.left{left: 0;}
+			.right{right: 0;}
+		}
+	}
+	
 }
 
 footer{
