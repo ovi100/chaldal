@@ -62,6 +62,31 @@ $(document).ready(function() {
 
     /*
         * ----------------------------------------------
+        *--------------Home Product Slider--------------
+        * ----------------------------------------------
+    */
+
+    $('.hp-slider').owlCarousel({
+        loop:true,
+        margin:10,
+        dots:false,
+        nav:true,
+        navText: [
+            '<i class="icofont-thin-left"></i>',
+            '<i class="icofont-thin-right"></i>'
+        ],
+        responsive:{
+            0:{
+              items:1
+            },
+            767:{
+              items:2
+            }
+        }
+    });
+
+    /*
+        * ----------------------------------------------
         *------------Related Product Slider-------------
         * ----------------------------------------------
     */

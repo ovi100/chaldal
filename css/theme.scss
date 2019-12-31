@@ -169,7 +169,7 @@ a:hover, a:visited, a:focus {
     display: block;
     padding: 10px 25px;
     text-align: center;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .btn-transparent{
@@ -192,13 +192,14 @@ a:hover, a:visited, a:focus {
 		@include transition(all,0.3s ,ease-in);
 	}
 }
-.btn-bcolor{
-	background: $bcolor;
-	border: 1px solid $bcolor;
-	color: $wcolor;
-	&:hover{
-		background: transparent;
-		color:$bcolor;
+.category-box-btn{
+	background: $wcolor;
+    border: 1px solid #ddd;
+    @include border-radius(3px);
+    color: $bcolor;
+    &:hover{
+		background: $wcolor;
+		color: $bcolor;
 		@include transition(all,0.3s ,ease-in);
 	}
 }
@@ -212,9 +213,10 @@ a:hover, a:visited, a:focus {
 	text-align:center;
 
 	h2{
-		color: #111111;
-	    font-size: 32px;
-	    font-weight: 600;
+		color: $bcolor;
+	    font-size: 20px;
+	    font-weight: 400;
+	    text-transform: capitalize;
 	}
 
 	p{
@@ -247,6 +249,31 @@ a:hover, a:visited, a:focus {
 // ********************************
 
 // CSS For Layout Page
+.show-sidemenu{
+	left: -400px;
+	@include transition(all,.4s,ease);
+}
+
+.toggle-content{
+	@include transition(all,.4s,ease);
+	.left-content{
+		width: 0 !important;
+	    float: none !important;
+	    .sideNav{
+	    	left: -300px !important;
+		    width: 0 !important;
+	    }
+	}
+	.right-content{
+		width: 100% !important;
+	    float: none !important;
+
+	    .home-banner{
+			.container{padding-left: 15 !important;}
+		}
+	}
+}
+
 .sideNav{
 	position: fixed;
 	top: 50px;
@@ -349,26 +376,84 @@ a:hover, a:visited, a:focus {
 	}
 }
 
-.show-sidemenu{
-	left: -400px;
-	@include transition(all,.4s,ease);
+footer{
+	background:#f5f5f5;
+	color: $bcolor;
+	padding: 25px 15px;
+
+	h5{
+		color: $brand-color;
+		font-weight: 600;
+	}
+
+	ul{
+		li{
+			a{
+				color: #000;
+				font-size: 13px;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.newsletter{
+		button{
+			height: 40px;
+			border-color: #b2b3b5;
+			border-radius: 0;
+		}
+		.nl-btn-left{
+			border-right: 0;
+			&:hover,&:active,&:focus{
+				background: $wcolor;
+				box-shadow: none;
+				outline: 0;
+			}
+		}
+		.nl-btn-right{
+			background: #737376;
+			border-color: #737376;
+			color: $wcolor;
+		}
+		.form-control{
+			height: 40px;
+			border-left: 0;
+			box-shadow: none;
+			border-color: #b2b3b5;
+		}
+	}
+
+	.social-media-icon{
+		padding: 25px 0;
+		ul{
+			text-align: center;
+			li{
+				display: inline-block;
+				margin-right: 20px;			
+				a{
+					color: $bcolor;
+					
+					font-size: 25px;
+					&:hover{
+						color: $brand-color;
+					}
+				}
+			}
+		}
+	}
+
+	.payment-icon{
+		ul{
+			margin-bottom: 0;
+			text-align: right;
+			li{display: inline-block;}
+		}
+	}
 }
 
-.toggle-content{
-	.left-content{
-		width: 0 !important;
-	    float: none !important;
-	    .sideNav{
-	    	left: -300px !important;
-		    width: 0 !important;
-	    }
-	}
-	.right-content{
-		width: 100% !important;
-	    float: none !important;
-	}
-	@include transition(all,.4s,ease);
-}
+// *********************************
+
+// CSS For Index Page
 
 .site-wrapper{
 	padding-top: 50px;
@@ -487,126 +572,52 @@ a:hover, a:visited, a:focus {
 			.left{left: 0;}
 			.right{right: 0;}
 		}
-	}
-	
-}
 
-footer{
-	background:#f5f5f5;
-	color: $bcolor;
-	padding: 25px 15px;
-
-	h5{
-		color: $brand-color;
-		font-weight: 600;
-	}
-
-	ul{
-		li{
-			a{
-				color: #000;
-				font-size: 13px;
-				text-transform: capitalize;
+		.home-category-box{
+			padding-left: 30px;
+		    padding-right: 30px;
+		    .row{
+				margin-bottom: 15px;
 			}
+			.tbtn{padding: 20px;}
 		}
-	}
 
-	.newsletter{
-		button{
-			height: 40px;
-			border-color: #b2b3b5;
-			border-radius: 0;
+		.home-banner{
+			padding-bottom: 35px;
+			.container{padding-left: 0;}
 		}
-		.nl-btn-left{
-			border-right: 0;
-			&:hover,&:active,&:focus{
-				background: $wcolor;
-				box-shadow: none;
-				outline: 0;
-			}
-		}
-		.nl-btn-right{
-			background: #737376;
-			border-color: #737376;
-			color: $wcolor;
-		}
-		.form-control{
-			height: 40px;
-			border-left: 0;
-			box-shadow: none;
-			border-color: #b2b3b5;
-		}
-	}
 
-	.social-media-icon{
-		padding: 25px 0;
-		ul{
-			text-align: center;
-			li{
-				display: inline-block;
-				margin-right: 20px;			
-				a{
-					color: $bcolor;
-					
-					font-size: 25px;
-					&:hover{
-						color: $brand-color;
+		.home-product-slider{
+			.hp-slider{
+				.item {
+				    padding: 15px;
+				    border: 1px solid #ddd;
+				    border-radius: 5px;
+				}
+				.owl-nav{
+					.owl-prev{
+						position: absolute;
+					    top: 40%;
+					    left: -25px;
+					    color: $bcolor;
+					    font-size: 25px;
+					    &:focus{outline: 0;}
+					}
+					.owl-next{
+						position: absolute;
+					    top: 30%;
+					    right: -25px;
+					    color: $bcolor;
+					    font-size: 25px;
+					    &:focus{outline: 0;}
 					}
 				}
 			}
 		}
 	}
-
-	.payment-icon{
-		ul{
-			margin-bottom: 0;
-			text-align: right;
-			li{display: inline-block;}
-		}
-	}
 }
 
-// *********************************
 
-// CSS For Index Page
-
-.home-category-list{
-	.row{
-		margin-bottom: 15px;
-		.tbtn{padding: 15px 20px;}
-	}
-}
-
-.home-category-box{
-	.row{margin-bottom: 25px;}
-	.category-box{
-		.photo{margin-bottom: 15px;}
-	}
-}
-
-.home-product-slider{
-	
-	.hp-slider{
-		.owl-nav{
-			.owl-prev{
-				position: absolute;
-			    top: 30%;
-			    left: -25px;
-			    color: $bcolor;
-			    font-size: 25px;
-			    &:focus{outline: 0;}
-			}
-			.owl-next{
-				position: absolute;
-			    top: 30%;
-			    right: -25px;
-			    color: $bcolor;
-			    font-size: 25px;
-			    &:focus{outline: 0;}
-			}
-		}
-	}
-}
 
 .product{
 	text-align: center;
