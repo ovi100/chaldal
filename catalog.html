@@ -4,16 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Matalan</title>
+	<title>Chaldal</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Owl Carousel Core CSS -->
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<!-- Fancybox Core CSS -->
-	<link rel="stylesheet" href="css/fancybox.css">
 	<!-- Site Icon Core CSS -->
 	<link rel="stylesheet" href="css/icofont.css">
+	<!-- Owl Carousel Core CSS -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
 	<!-- Developer Custom CSS -->
 	<link rel="stylesheet" href="css/theme.css">
 	<link rel="stylesheet" href="css/mediaqueries.css">
@@ -23,899 +22,487 @@
 	<!-- Start Project Code  -->
 
 	<!-- Start Mobile Side Menu -->
-	<div id="menu-sidenav" class="menu-sidenav">
-		<div class="sidenav-menu-link">
-			<ul>
-				<li><a href="">home</a></li>
-				<li><a href="">woman</a></li>
-				<li>
-					<a data-toggle="collapse" href="#second-category">
-						men <span class="icofont-thin-right rotate-icon"></span>
-					</a>
-					<div id="second-category" class="collapse">
-						<ul>
-							<li>
-								<a data-toggle="collapse" href="#third-category">
-									t-shirt <span class="icofont-thin-right rotate-icon"></span>
-								</a>
-								<div id="third-category" class="collapse">
-									<ul>
-										<li><a href="#">normal shirt</a></li>
-										<li><a href="#">formal shirt</a></li>
-										<li><a href="#">polo shirt</a></li>
-									</ul>
-								</div>
-							</li>
-							<li><a href="#">pant's</a></li>
-							<li><a href="#">shoe</a></li>
-						</ul>
-					</div>
-				</li>
-				<li><a href=""><i class="icofont-grocery"></i> my cart</a></li>
-				<li><a href=""><i class="icofont-check-circled"></i> checkout</a></li>
-			</ul>
-		</div>
-		<hr>
-		<div class="sidenav-menu-account">
-			<ul>
-				<li><a href="#">Terms and Condition</a></li>
-				<li><a href="#"><i class="icofont-group-students"></i> Register</a></li>
-				<li><a href="#"><i class="icofont-login"></i> Login</a></li>
-			</ul>
-		</div>
-		<hr>
-		<div class="sidenav-menu-social">
-			<ul>
-				<li><a href=""><i class="icofont-twitter"></i></a></li>
-				<li><a href=""><i class="icofont-facebook"></i></a></li>
-				<li><a href=""><i class="icofont-instagram"></i></a></li>
-				<li><a href=""><i class="icofont-youtube-play"></i></a></li>
-			</ul>
+	<div class="sidenav-wrapper visible-xs">
+		<div id="sideNav" class="sideNav">
+			<div id="menu-sidenav" class="menu-sidenav">
+				<div class="sidenav-menu-link">
+					<ul class="top-link">
+						<li><a href="">Offers</a></li>
+						<li><a href="">Discount</a></li>
+						<li><a href="">Terms and Condition</a></li>
+					</ul>
+					<hr>
+					<ul>
+						<li><a href="">home</a></li>
+						<li><a href="">woman</a></li>
+						<li>
+							<a data-toggle="collapse" href="#second-category">
+								men <span class="icofont-thin-right rotate-icon"></span>
+							</a>
+							<div id="second-category" class="collapse">
+								<ul>
+									<li>
+										<a data-toggle="collapse" href="#third-category">
+											t-shirt <span class="icofont-thin-right rotate-icon"></span>
+										</a>
+										<div id="third-category" class="collapse">
+											<ul>
+												<li><a href="#">normal shirt</a></li>
+												<li><a href="#">formal shirt</a></li>
+												<li><a href="#">polo shirt</a></li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">pant's</a></li>
+									<li><a href="#">shoe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="">kid</a></li>
+					</ul>
+				</div>
+				<hr>
+				<div class="sidenav-menu-account visible-xs">
+					<ul>
+						<li><a href="#"><i class="icofont-group-students"></i> Register</a></li>
+						<li><a href="#"><i class="icofont-login"></i> Login</a></li>
+					</ul>
+				</div>
+				<hr class="visible-xs">
+				<div class="sidenav-menu-social visible-xs">
+					<ul>
+						<li><a href=""><i class="icofont-twitter"></i></a></li>
+						<li><a href=""><i class="icofont-facebook"></i></a></li>
+						<li><a href=""><i class="icofont-instagram"></i></a></li>
+						<li><a href=""><i class="icofont-youtube-play"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sideNav-overlay"></div>
 		</div>
 	</div>
 	<!-- End Mobile Side Menu -->
 
-	<!-- Start Header Section -->
-	<div class="header" id="header">
-		<div class="top-nav">
-			<div class="container">
-				<ul>
-					<li><a href="">my account</a></li>
-					<li><a href="">wishlist</a></li>
-					<li><a href="">checkout</a></li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class="action-bar">
-			<div class="container">
+	<div class="site-wrapper">
+		<!-- Start Header Section -->
+		<div class="header" id="header">		
+			<div class="action-bar">
 				<div class="row">
-					<div class="col-xs-3 col-sm-4 hidden-lg hidden-md">
-						<div class="sidenav">
-							<a id="mobile-menu">
-				    			<i class="icofont-navigation-menu"></i>
-				    		</a>
+					<div class="col-md-1 col-sm-1 col-xs-2 text-center">
+						<div class="sidenav-toggle-btn">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+					<div class="col-md-2 col-sm-3 hidden-xs">
 						<div class="logo">
 							<a href="">
-								<img class="img-responsive" src="http://placehold.jp/20/cccccc/858585/250x35.png?text=245%20x%2035" alt="Logo">
+								<img src="http://placehold.jp/154x40.png?text=154%20x%2040">
 							</a>
 						</div>
 					</div>
 
-					<div class="col-lg-5 col-md-5 hidden-sm hidden-xs">
+					<div class="col-md-7 col-sm-5 col-xs-8">
 						<div class="searchbox">
 							<div class="input-group">
+								<input type="text" class="form-control" placeholder="search by products name or collection">
 								<div class="input-group-addon">
 									<button type="submit">
 										<i class="icofont-search-1"></i>
 									</button>
 								</div>
-								<input type="text" class="form-control" placeholder="Enter Keyword or Product Code">
-								<div class="input-group-addon">
-									<button type="submit" style="color: #fff">SEARCH</button>
-								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<div class="action-icon">
-							<ul>
-								<li class="hidden-lg hidden-md">
-									<div class="cart-icon">
-										<a data-toggle="collapse" href="#msearchbox"><i class="icofont-search-1"></i></a>
-									</div>
-								</li>
-								<li>
-									<div class="cart-text hidden-sm hidden-xs">
-										<a href="">VIEW YOUR BAG(1)</a>
-									</div>
-									<div class="cart-icon hidden-lg hidden-md">
-										<a href=""><img src="images/shopping-bag.png"></a>
-										<span>1</span>
-									</div>
-									<div class="cart-items-holder">
-										<div class="visible-xs text-center">
-											<h4>
-												<b>Shopping Bag</b>
-												<span class="pull-right icofont-close mini-cart-close"></span>
-											</h4>
-											<a href="/" class="tbtn btn-tcolor">continue shopping</a>
-											<span>OR</span>
-											<a href="" class="tbtn btn-tcolor">checkout</a>
-											<h6 class="text-left"><b>2 items in your bag</b></h6>
-										</div>
-										<div class="cart-item">
-											<div class="item">
-												<div class="row text-left">
-													<div class="col-sm-3 col-xs-3">
-														<img class="img-responsive" src="https://placehold.jp/640x896.png">
-													</div>
-													<div class="col-sm-9 col-xs-9">
-														<h6><b><a href="">product name will be very long</a></b></h6>
-														<p>Product ID: 1236675</p>
-														<p class="cart-action">
-															<a href=""><i class="icofont-close"></i> remove</a>
-															<!-- <a href=""><i class="icofont-refresh"></i> update</a> -->
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="item">
-												<div class="row text-left">
-													<div class="col-sm-3 col-xs-3">
-														<img class="img-responsive" src="https://placehold.jp/640x896.png">
-													</div>
-													<div class="col-sm-9 col-xs-9">
-														<h6><b><a href="">product name will be very long</a></b></h6>
-														<p>Product ID: 1236675</p>
-														<p class="cart-action">
-															<a href=""><i class="icofont-close"></i> remove</a>
-															<!-- <a href=""><i class="icofont-refresh"></i> update</a> -->
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="item">
-												<div class="row text-left">
-													<div class="col-sm-3 col-xs-3">
-														<img class="img-responsive" src="https://placehold.jp/640x896.png">
-													</div>
-													<div class="col-sm-9 col-xs-9">
-														<h6><b><a href="">product name will be very long</a></b></h6>
-														<p>Product ID: 1236675</p>
-														<p class="cart-action">
-															<a href=""><i class="icofont-close"></i> remove</a>
-															<!-- <a href=""><i class="icofont-refresh"></i> update</a> -->
-														</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="row subtotal">
-											<div class="col-sm-6 col-xs-6 text-left">
-												<h5><b>Subtotal</b></h5>
-											</div>
-											<div class="col-sm-6 col-xs-6 text-right">
-												<h5><b>$400</b></h5>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-xs-6 text-left hidden-xs">
-												<a href="" class="tbtn btn-bcolor">view bag</a>
-											</div>
-											<div class="col-sm-6 col-xs-12 text-right">
-												<a href="" class="tbtn btn-tcolor">checkout</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="hidden-sm hidden-xs">
-									<a href="" class="tbtn btn-tcolor">checkout</a>
-								</li>
+					<div class="col-md-2 col-sm-3 col-xs-2 text-right">
+						<div class="action-icon visible-xs">
+							<i class="icofont-bubble-down"></i>
+						</div>
+						<div class="user-account">
+							<ul class="hidden-xs">
+								<li><a href="#">logout</a></li>
+								<li><a href="#">my account</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div class="main-nav hidden-sm hidden-xs">
-			<div class="mainnav-wrapper">
-				<ul>
-					<li class="mega-dropdown">
-						<a href="">sale</a>
-						<div class="mega-dropdown-content">
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-3 col-md-3 col-sm-3">
-										<ul>
-											<li><h5 class="submenu-header">promotions</h5></li>
-											<ul class="submenu-list">
-												<li><a href="">Sofas On Discount</a></li>
-												<li><a href="">Buyback Guarantee</a></li>
-												<li><a href="">Deals of the Week</a></li>
-												<li><a href="">Clearance Sale</a></li>
-												<li><a href="">Back in Stock</a></li>
-											</ul>
-										</ul>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-3">
-										<ul>
-											<li><h5 class="submenu-header">promotions</h5></li>
-											<ul class="submenu-list">
-												<li><a href="">Sofas On Discount</a></li>
-												<li><a href="">Buyback Guarantee</a></li>
-												<li><a href="">Deals of the Week</a></li>
-												<li><a href="">Clearance Sale</a></li>
-												<li><a href="">Back in Stock</a></li>
-											</ul>
-										</ul>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-3">
-										<ul>
-											<li><h5 class="submenu-header">promotions</h5></li>
-											<ul class="submenu-list">
-												<li><a href="">Sofas On Discount</a></li>
-												<li><a href="">Buyback Guarantee</a></li>
-												<li><a href="">Deals of the Week</a></li>
-												<li><a href="">Clearance Sale</a></li>
-												<li><a href="">Back in Stock</a></li>
-											</ul>
-										</ul>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-3">
-										<ul>
-											<li><h5 class="submenu-header">promotions</h5></li>
-											<ul class="submenu-list">
-												<li><a href="">Sofas On Discount</a></li>
-												<li><a href="">Buyback Guarantee</a></li>
-												<li><a href="">Deals of the Week</a></li>
-												<li><a href="">Clearance Sale</a></li>
-												<li><a href="">Back in Stock</a></li>
-											</ul>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="">living</a>
-					</li>
-					<li>
-						<a href="">bedroom</a>
-					</li>
-					<li>
-						<a href="">dining</a>
-					</li>
-					<li>
-						<a href="">storage</a>
-					</li>
-					<li>
-						<a href="">study</a>
-					</li>
-					<li>
-						<a href="">mattresses</a>
-					</li>
-					<li>
-						<a href="">interiors</a>
-					</li>
-					<li>
-						<a href="">decor</a>
-					</li>
-					<li>
-						<a href="">new</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- End Header Section -->
+		<!-- End Header Section -->
 
-	<div class="back-link">
-		<div class="container">
-			<ul class="breadcrumb">
-				<li><a href="/">matalan</a></li>
-				<li class="active">mens</li> 
-			</ul>
-		</div>
-	</div>
-
-	<!-- Start Collection Section -->
-	<section class="collection">
-		<div class="container">
-			<h4 class="text-center visible-xs">men</h4>
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-4">
-					<div class="collection-count">
-						<h4>(100 products)</h4>
-						<p>filter your results</p>
-					</div>
-					<div class="filters">
-						<div class="filter-header">
-							<span class="pull-right filter-close-icon"><i class="icofont-close"></i></span>
+		<div class="row">
+			<div class="col-sm-2 left-content">
+				<div id="sideNav" class="sideNav">
+					<div id="menu-sidenav" class="menu-sidenav">
+						<div class="sidenav-menu-link">
+							<ul class="top-link">
+								<li><a href="">Offers</a></li>
+								<li><a href="">Discount</a></li>
+								<li><a href="">Terms and Condition</a></li>
+							</ul>
+							<hr>
+							<ul>
+								<li><a href="">home</a></li>
+								<li><a href="">woman</a></li>
+								<li>
+									<a data-toggle="collapse" href="#second-category">
+										men <span class="icofont-thin-right rotate-icon"></span>
+									</a>
+									<div id="second-category" class="collapse">
+										<ul>
+											<li>
+												<a data-toggle="collapse" href="#third-category">
+													t-shirt <span class="icofont-thin-right rotate-icon"></span>
+												</a>
+												<div id="third-category" class="collapse">
+													<ul>
+														<li><a href="#">normal shirt</a></li>
+														<li><a href="#">formal shirt</a></li>
+														<li><a href="#">polo shirt</a></li>
+													</ul>
+												</div>
+											</li>
+											<li><a href="#">pant's</a></li>
+											<li><a href="#">shoe</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="">kid</a></li>
+							</ul>
 						</div>
-						<div class="filter-option">
-							<div class="panel-group">
-							  	<div class="panel panel-default">
-								    <div class="panel-heading">
-								      	<h5 class="panel-title">
-								        	<a data-toggle="collapse" href="#filter1">
-								        		<span>waist size</span><span class="pull-right"><i class="icofont-minus fo-icon-change"></i></span>
-								        	</a>
-								      	</h5>
-								    </div>
-								    <div id="filter1" class="panel-collapse collapse in filter-collapse">
-								      	<div class="panel-body">
-									        <label class="option">
-									          	<span>slim fit</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>30</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>32</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>34</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-								      	</div>
-								    </div>
-							  	</div>
-							</div>
+						<hr>
+						<div class="sidenav-menu-account visible-xs">
+							<ul>
+								<li><a href="#"><i class="icofont-group-students"></i> Register</a></li>
+								<li><a href="#"><i class="icofont-login"></i> Login</a></li>
+							</ul>
 						</div>
-						<!-- Filter Option 2 -->
-						<div class="filter-option">
-							<div class="panel-group">
-							  	<div class="panel panel-default">
-								    <div class="panel-heading">
-								      	<h5 class="panel-title">
-								        	<a data-toggle="collapse" href="#filter2">
-								        		<span>waist size</span><span class="pull-right"><i class="icofont-minus fo-icon-change"></i></span>
-								        	</a>
-								      	</h5>
-								    </div>
-								    <div id="filter2" class="panel-collapse collapse in filter-collapse">
-								      	<div class="panel-body">
-									        <label class="option">
-									          	<span>slim fit</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>30</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>32</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-									        <label class="option">
-									          	<span>34</span>
-									          	<input type="checkbox">
-									          	<span class="checkmark"></span>
-									        </label>
-								      	</div>
-								    </div>
-							  	</div>
-							</div>
+						<hr class="visible-xs">
+						<div class="sidenav-menu-social visible-xs">
+							<ul>
+								<li><a href=""><i class="icofont-twitter"></i></a></li>
+								<li><a href=""><i class="icofont-facebook"></i></a></li>
+								<li><a href=""><i class="icofont-instagram"></i></a></li>
+								<li><a href=""><i class="icofont-youtube-play"></i></a></li>
+							</ul>
 						</div>
 					</div>
+					<div class="sideNav-overlay"></div>
 				</div>
-				<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-					<h3 class="collection-name text-center">men</h3>
-					<div class="sort-option">
+			</div>
+			<div class="col-sm-10 right-content">
+				<div class="collection-image">
+					<img src="">
+				</div>
+				<div class="back-link">
+					<ul class="breadcrumb">
+						<li><a href="/">Home</a></li>
+						<li class="active">men</li> 
+					</ul>
+				</div>
+
+				<!-- Start Collection Section -->
+				<div class="collection">
+					<div class="container-fluid">
+						<h4 class="text-center visible-xs">men</h4>
 						<div class="row">
-							<div class="col-sm-6 hidden-xs">
-								<ul class="nav nav-pills">
-								    <li>
-								    	<a data-toggle="pill" href="#grid4x4">
-								    		<img class="img-responsive img-4x4" src="images/grid4x4.png">
-								    	</a>
-								    </li>
-								    <li>
-								    	<a data-toggle="pill" href="#grid3x3">
-								    		<img class="img-responsive img-3x3" src="images/grid3x3.png">
-								    	</a>
-									</li>
-							  	</ul>
-							</div>
-							<div class="col-sm-6 col-xs-6">
-								<select class="form-control">
-								    <option>Stort By</option>
-								    <option>New on Store</option>
-								    <option>High to low</option>
-								    <option>Low to high</option>
-							  	</select>
-							</div>
-							<div class="col-sm-6 col-xs-6 visible-xs">
-								<div class="mobile-filter">
-									Filter By 
-									<span class="pull-right"><i class="icofont-thin-down"></i></span>
+							<div class="col-xs-12">
+								<div class="sort-option">
+									<div class="row">
+										<div class="col-sm-3 col-xs-3">
+											<h3 class="collection-name">men</h3>
+										</div>
+										<div class="col-sm-6 col-xs-3 visible-xs">
+											<div class="mobile-filter">
+												Filter By 
+												<span class="pull-right"><i class="icofont-thin-down"></i></span>
+											</div>
+										</div>
+										<div class="col-sm-9 col-xs-6">
+											<select class="form-control">
+											    <option>Stort By</option>
+											    <option>New on Store</option>
+											    <option>High to low</option>
+											    <option>Low to high</option>
+										  	</select>
+										</div>
+									</div>
+								</div>
+								<div class="collection-products">
+									<div class="row">
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+									</div>
+									<!-- start 2nd row -->
+									<div class="row">
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+										<div class="col-md-2 col-sm-3 col-xs-6">
+											<div class="product">
+										    	<div class="photo">
+										    		<a href="">
+										    			<img class="img-responsive" src="https://placehold.jp/850x850.png">
+										    		</a>
+										    	</div>
+										    	<div class="name">
+										    		<a href="">new full slave t-shirt for men</a>
+										    	</div>
+										    	<span class="price">$1000</span>
+										    	<span class="old-price">
+										    		<s>$1200</s>
+										    	</span>
+										    </div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="tab-content collection-products">
-						<div id="grid4x4" class="tab-pane fade in active">
-							<div class="row">
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Start 2nd Row -->
-							<div class="row">
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-					    </div>
-					    <div id="grid3x3" class="tab-pane fade in hidden-xs">
-							<div class="row">
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Start 2nd Row -->
-							<div class="row">
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4 col-xs-6">
-									<div class="product-box">
-										<div class="photo">
-											<a class="featured-img" href="">
-												<img class="img-responsive front-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%201">
-												<img class="img-responsive back-img" src="https://placehold.jp/80/cccccc/858585/640x896.png?text=Image%202">
-											</a>
-										</div>
-										<div class="text">
-											<div class="name">
-												<a href="">product name will be very long</a>
-											</div>
-											<div class="price"><span>400.00</span></div>
-											<div class="link"><a href="">view</a></div>
-											<div class="rating">
-												<span>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-													<i class="icofont-star"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-					    </div>
-					</div>
 				</div>
+				<!-- Start Collection Section -->
+
+				<!-- Start Footer Section -->
+				<footer>
+					<div class="footer-content">
+						<div class="row">
+							<div class="col-sm-5 col-xs-12">
+								<h5 class="text-capitalize">about matalan</h5>
+								<div class="footer-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae nisi elit. Duis bibendum fermentum mi vel condimentum. Quisque vehicula nec arcu eget tempus. Proin maximus accumsan ante, ut efficitur sem interdum ac. Quisque euismod est vel porttitor dapibus. Maecenas mauris felis, aliquet non hendrerit eu, mattis ornare dui.
+								</div>
+							</div>
+							<div class="col-sm-2 col-xs-12">
+								<h5 class="text-capitalize">footer link</h5>
+								<div class="footer-link">
+									<ul>
+										<li><a href="">order</a></li>
+										<li><a href="">delivery</a></li>
+										<li><a href="">return</a></li>
+										<li><a href="">faq</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-sm-5 col-xs-12">
+								<div class="newsletter">
+									<h5>Sign up for the latest offers and promotions</h5>
+									<div class="input-group">
+										<div class="input-group-btn">
+									      <button class="btn btn-default nl-btn-left">
+									        <i class="icofont-envelope"></i>
+									      </button>
+									    </div>
+									    <input type="text" class="form-control" placeholder="Please Enter an email">
+									    <div class="input-group-btn">
+									      <button class="btn btn-default nl-btn-right" type="submit">
+									        SIGN UP
+									      </button>
+									    </div>
+									  </div>
+								</div>
+								<div class="social-media-icon">
+									<ul>
+										<li><a href=""><i class="icofont-twitter"></i></a></li>
+										<li><a href=""><i class="icofont-facebook"></i></a></li>
+										<li><a href=""><i class="icofont-instagram"></i></a></li>
+										<li><a href=""><i class="icofont-pinterest"></i></a></li>
+										<li><a href=""><i class="icofont-youtube-play"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-7 col-sm-push-5 col-xs-12 payment-icon">
+								<ul>
+									<li><img src="images/amex.png"></li>
+									<li><img src="images/mc.png"></li>
+									<li><img src="images/vc.png"></li>
+									<li><img src="images/cash.svg"></li>
+								</ul>
+							</div>
+							<div class="col-sm-5 col-sm-pull-7 col-xs-12 copy-right-text">
+								&copy; Copyright 2019-Matalan
+							</div>
+						</div>
+					</div>
+				</footer>
+				<!-- End Footer Section -->
 			</div>
 		</div>
-	</section>
-	<!-- Start Collection Section -->
-	
-	<!-- Start Footer Section -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-					<div class="newsletter">
-						<h5>Sign up for the latest offers and promotions</h5>
-						<div class="input-group">
-							<div class="input-group-btn">
-						      <button class="btn btn-default nl-btn-left">
-						        <i class="icofont-envelope"></i>
-						      </button>
-						    </div>
-						    <input type="text" class="form-control" placeholder="Please Enter an email">
-						    <div class="input-group-btn">
-						      <button class="btn btn-default nl-btn-right" type="submit">
-						        SIGN UP
-						      </button>
-						    </div>
-						  </div>
-					</div>
-					<div class="social-media-icon">
-						<ul>
-							<li><a href=""><i class="icofont-twitter"></i></a></li>
-							<li><a href=""><i class="icofont-facebook"></i></a></li>
-							<li><a href=""><i class="icofont-instagram"></i></a></li>
-							<li><a href=""><i class="icofont-pinterest"></i></a></li>
-							<li><a href=""><i class="icofont-youtube-play"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-offset-1 col-md-offset-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-							<h5>customer services</h5>
-							<div class="footer-link">
-								<ul>
-									<li><a href="">order</a></li>
-									<li><a href="">delivery</a></li>
-									<li><a href="">return</a></li>
-									<li><a href="">faq</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-							<h5>about matalan</h5>
-							<div class="footer-link">
-								<ul>
-									<li><a href="">about</a></li>
-									<li><a href="">history</a></li>
-									<li><a href="">project</a></li>
-									<li><a href="">job</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<h5>customer services</h5>
-							<div class="footer-link">
-								<ul>
-									<li><a href="">order</a></li>
-									<li><a href="">delivery</a></li>
-									<li><a href="">return</a></li>
-									<li><a href="">faq</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-7 col-sm-push-5 col-xs-12 payment-icon">
-					<img class="img-responsive" src="images/ssl-long.png" alt="payment">
-				</div>
-				<div class="col-sm-5 col-sm-pull-7 col-xs-12 copy-right-text">
-					&copy; Copyright 2019-Matalan
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer Section -->
+	</div>
 
 	<!-- End Project Code  -->
 
@@ -927,8 +514,6 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- Owl-Carousel Core JS -->
 	<script type="text/javascript" src="js/owl.carousel.js"></script>
-	<!-- Fancybox Core JS -->
-	<script type="text/javascript" src="js/fancybox.js"></script>
 	<!-- ElevateZoom Core JS -->
 	<script type="text/javascript" src="js/elevateZoom.min.js"></script>
 	<!-- Developer Custom JS -->

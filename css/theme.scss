@@ -142,7 +142,6 @@ $black-opacity: rgba($bcolor, 0.3);
 html {overflow-x: hidden;}
 
 body {
-  overflow-x: hidden;
   font-family:$theme-font; 
 }
 
@@ -162,8 +161,6 @@ a:hover, a:visited, a:focus {
 	@include scale(1.2);
 	@include transition(all,0.8s,ease);
 }
-
-
 .tbtn{
     border-radius: 0;
     display: block;
@@ -273,107 +270,189 @@ a:hover, a:visited, a:focus {
 		}
 	}
 }
-
-.sideNav{
-	position: fixed;
-	top: 50px;
-    left: 0;
-    width: 0;;
-    height: 100%;
-    z-index: 10;
-    @include transition(all,.4s,ease);
-	.menu-sidenav {
+.sidenav-wrapper{
+	.sideNav{
 		position: fixed;
-		
+		top: 50px;
+	    left: 0;
+	    width: 0;;
 	    height: 100%;
-	    width: 270px;
-	    background: $wcolor;
-	    overflow-x: hidden;
-	    z-index: 55;
+	    z-index: 10;
 	    @include transition(all,.4s,ease);
+		.menu-sidenav {
+			position: fixed;
+			
+		    height: 100%;
+		    width: 270px;
+		    background: $wcolor;
+		    overflow-x: hidden;
+		    z-index: 55;
+		    @include transition(all,.4s,ease);
 
-	    .sidenav-menu-link{
-		    padding-top: 15px;
+		    .sidenav-menu-link{
+			    padding-top: 15px;
 
-		    ul li{
-		    	margin-bottom: 10px;
-		    	padding: 0 25px;
-		    }
+			    ul li{
+			    	margin-bottom: 10px;
+			    	padding: 0 25px;
+			    }
 
-		    a{
-		    	color: $bcolor;
-		    	text-transform: capitalize;
-		    	@include transition(all,.4s,ease);
+			    a{
+			    	color: $bcolor;
+			    	text-transform: capitalize;
+			    	@include transition(all,.4s,ease);
 
-		    	&:hover{color: $brand-color;}
+			    	&:hover{color: $brand-color;}
 
-		    	span{
-		    		color: $bcolor;
-		    		float: right;
-					font-size: 20px;
-					font-weight: 600;
-					line-height: 16px;
-					text-align: center;
-		    	}
-		    }
+			    	span{
+			    		color: $bcolor;
+			    		float: right;
+						font-size: 20px;
+						font-weight: 600;
+						line-height: 16px;
+						text-align: center;
+			    	}
+			    }
 
-		    #second-category{
-		    	margin: 10px;
-			    border-left: 1px solid #ddd;
-		    }
+			    #second-category{
+			    	margin: 10px;
+				    border-left: 1px solid #ddd;
+			    }
 
-		    #third-category{
-		    	margin: 10px;
-			    border-left: 1px solid #ddd;
-		    }
+			    #third-category{
+			    	margin: 10px;
+				    border-left: 1px solid #ddd;
+			    }
+			}
+
+		    hr{border-top: 1px solid #ddd;}
+
+		    .sidenav-menu-account{
+			    padding-top: 30px;
+			    padding-left: 20px;
+			    padding-right: 20px;
+
+			    ul li{margin-bottom: 25px;}
+
+			    a{
+			    	color: $bcolor;
+			    	text-transform: capitalize;
+			    	@include transition(all,.4s,ease);
+
+			    	&:hover{color: #757575;}
+			    }
+			}
+
+			.sidenav-menu-social{
+			    padding-top: 30px;
+			    padding-left: 20px;
+			    padding-right: 20px;
+
+			    ul li{
+			    	margin-bottom: 25px;
+			    	float: left;
+			    }
+
+			    a{
+			    	color: $bcolor;
+			    	font-size: 22px;
+		    	    margin-right: 20px;
+			    	text-transform: capitalize;
+			    	@include transition(all,.4s,ease);
+
+			    	&:hover{color: #757575;}
+			    }
+			}
 		}
-
-	    hr{border-top: 1px solid #ddd;}
-
-	    .sidenav-menu-account{
-		    padding-top: 30px;
-		    padding-left: 20px;
-		    padding-right: 20px;
-
-		    ul li{margin-bottom: 25px;}
-
-		    a{
-		    	color: $bcolor;
-		    	text-transform: capitalize;
-		    	@include transition(all,.4s,ease);
-
-		    	&:hover{color: #757575;}
-		    }
-		}
-
-		.sidenav-menu-social{
-		    padding-top: 30px;
-		    padding-left: 20px;
-		    padding-right: 20px;
-
-		    ul li{
-		    	margin-bottom: 25px;
-		    	float: left;
-		    }
-
-		    a{
-		    	color: $bcolor;
-		    	font-size: 22px;
-	    	    margin-right: 20px;
-		    	text-transform: capitalize;
-		    	@include transition(all,.4s,ease);
-
-		    	&:hover{color: #757575;}
-		    }
+		.sideNav-overlay{
+			position: fixed;
+		    width: 0;
+		    height: 100%;
+		    background: rgba(0, 0, 0, 0.5);
+		    opacity: 0;
 		}
 	}
-	.sideNav-overlay{
-		position: fixed;
-	    width: 0;
-	    height: 100%;
-	    background: rgba(0, 0, 0, 0.5);
-	    opacity: 0;
-	}
+}
+
+.header{
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: #42c5bb;
+    z-index: 30;
+
+	.action-bar{
+		.sidenav-toggle-btn{
+			cursor: pointer;
+			padding-top: 13px;
+			span{
+				background: $bcolor;
+				width: 25px;
+			    height: 2px;
+			    display: block;
+			    margin-top: 5px;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		}
+
+		.logo {margin-top: 5px;}
+
+		.searchbox{
+			margin-top: 5px;
+			.input-group{
+
+	    		.form-control{
+	    			height: 40px;
+	    			border-right: 0;
+	    			@include box-shadow(none);
+	    			&:focus{
+	    				border-color: #ccc;
+	    			}
+	    		}
+
+	    		.input-group-addon{
+	    			background: $wcolor;
+	    			padding: 0;
+	    			button{color: #afafaf;}
+	    		}
+
+		    	button{
+	    			background: transparent;
+	    			border: 0;
+	    			color: $bcolor;
+				    font-size: 15px;
+				    padding: 0 10px;
+
+				    &:hover{
+		    	    	color:$brand-color;
+		    	    	@include transition(all,.6s,ease);
+		    	    }
+	    		}
+	    	}
+		}
+
+		.action-icon{}
+
+		.user-account{
+			ul{
+				margin-bottom: 0;
+				li{
+					
+				    height: 50px;
+				    background: #c52e2e;
+				    display: inline-block;
+				    line-height: 50px;
+				    padding: 0 15px;
+				    text-transform: capitalize;
+
+				    a{color: $wcolor;}
+				}
+			}
+		}
+    }
 }
 
 footer{
@@ -457,106 +536,54 @@ footer{
 
 .site-wrapper{
 	padding-top: 50px;
-	.header{
-		position: fixed;
-	    top: 0;
-	    left: 0;
-	    height: 50px;
-	    width: 100%;
-	    background: #42c5bb;
-	    z-index: 30;
-
-		.action-bar{
-			.sidenav-toggle-btn{
-				cursor: pointer;
-				margin-top: 15px;
-				span{
-					background: $bcolor;
-					width: 25px;
-				    height: 2px;
-				    display: block;
-				    margin-top: 5px;
-				    margin-left: auto;
-				    margin-right: auto;
-				}
-			}
-
-			.logo {margin-top: 5px;}
-
-			.searchbox{
-				margin-top: 5px;
-				.input-group{
-
-		    		.form-control{
-		    			height: 40px;
-		    			border-right: 0;
-		    			@include box-shadow(none);
-		    			&:focus{
-		    				border-color: #ccc;
-		    			}
-		    		}
-
-		    		.input-group-addon{
-		    			background: $wcolor;
-		    			padding: 0;
-		    			button{color: #afafaf;}
-		    		}
-
-			    	button{
-		    			background: transparent;
-		    			border: 0;
-		    			color: $bcolor;
-					    font-size: 15px;
-					    padding: 0 10px;
-
-					    &:hover{
-			    	    	color:$brand-color;
-			    	    	@include transition(all,.6s,ease);
-			    	    }
-		    		}
-		    	}
-			}
-
-			.action-icon{}
-
-			.user-account{
-				ul{
-					margin-bottom: 0;
-					li{
-						
-					    height: 50px;
-					    background: $wcolor;
-					    display: inline-block;
-					    line-height: 50px;
-					    padding: 0 10px;
-					    text-transform: capitalize;
-					}
-				}
-			}
-	    }
-	}
+	
 	.left-content{
-		width: 17%;
-	    float: left;
-
+		padding-right: 0;
 	    .sideNav{
-		    position: fixed;
-		    left: 0;
-		    width: 232px;
+	    	position: fixed;
+	    	width: 16.2%;
 		    height: 100%;
 		    border-right: 1px solid #ddd;
-		    z-index: 10;
 
 		    .menu-sidenav{
-		    	position: unset;
 			    height: 100%;
 			    width: 100%;
+			    .sidenav-menu-link {
+				    ul{
+				    	margin-bottom: 0;
+				    	li{
+				    		padding-top: 8px;
+						    padding-bottom: 8px;
+				    		padding-left: 20px;
+				    		a{
+						    	color: $bcolor;
+						    	text-transform: capitalize;
+						    	@include transition(all,.4s,ease);
+
+						    	&:hover{color: $brand-color;}
+
+						    	span{
+						    		color: $bcolor;
+						    		float: right;
+									font-size: 20px;
+									font-weight: 600;
+									line-height: 16px;
+									text-align: center;
+						    	}
+						    }
+						    &:hover{
+						    	// background: #ddd;
+						    	@include linear-gradient(#fff,5%,#ddd);
+						    }
+				    	}
+				    }
+				    hr{margin: 10px 0;}
+				}
 		    }
 	    }
 	}
 	.right-content{
-		width: 83%;
-	    float: right;
+		padding-left: 0;
 	    @include transition(all,.4s,ease);
 
 		#homeCarousel{
@@ -588,6 +615,7 @@ footer{
 		}
 
 		.home-product-slider{
+			margin-bottom: 40px;
 			.hp-slider{
 				.item {
 				    padding: 15px;
@@ -634,6 +662,9 @@ footer{
 .back-link{
 	.breadcrumb{
 		background: $wcolor;
+		margin-left: 15px;
+	    padding-left: 0;
+	    a{color: $bcolor;}
 	}
 }
 
@@ -641,14 +672,6 @@ footer{
 	h4{
 		font-weight: 600;
 		text-transform: uppercase;
-	}
-	.collection-count{
-		background: #f1f1f1;
-	    border: 1px solid #ddd;
-	    margin-bottom: 5px;
-	    padding: 10px;
-	    text-align: center;
-		p{text-transform: uppercase;}
 	}
 	.filters{
 		.filter-header{
@@ -714,7 +737,10 @@ footer{
 			}
 		}
 	}
-	.collection-name{text-transform: uppercase;}
+	.collection-name{
+		margin: 0;
+		text-transform: uppercase;
+	}
 	.sort-option {
 	    border-top: 1px solid #ddd;
 	    border-bottom: 1px solid #ddd;
@@ -750,8 +776,9 @@ footer{
 	    }
 
 	    .mobile-filter {
-		    width: 70%;
+		    width: 20%;
 		    border: 1px solid #ccc;
+		    cursor: pointer;
 		    padding: 5px 10px;
 		}
 	}
@@ -764,52 +791,23 @@ footer{
 
 .product-box{
 	.photo{
-		.featured-img{
-			&:hover{
-				.back-img{
-						display: block !important; 
-					}
-					.front-img{
-						display: none !important; 
-					}
-			}
-		}
-		.front-img{
-		  	display: block !important;
-		  	@include transition(all,1s,ease);
-		}
-		.back-img{
-		  	display: none !important;
-		  	@include transition(all,1s,ease);
+		margin-bottom: 10px;
+	}
+	.name{
+		margin-bottom: 10px;
+		a{
+			color: $bcolor;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    -webkit-line-clamp: 2;
+		    overflow: hidden;
 		}
 	}
-	.text{
-		padding: 15px;
-		text-align: center;
-		.name{
-			margin-bottom: 10px;
-			a{
-				color: #000;
-				text-transform: capitalize;
-			}
-		}
-		.price{
-			margin-bottom: 10px;
-			span{
-				font-size: 15px;
-			    font-weight: 700;
-			}
-		}
-		.link{
-			margin-bottom: 10px;
-			a{
-				background: $wcolor;
-			    border: 1px solid #ddd;
-			    color: $bcolor;
-			    font-size: 12px;
-			    padding: 5px 7px;
-			    text-transform: uppercase;
-			}
+	.price{
+		margin-bottom: 10px;
+		span{
+			font-size: 15px;
+		    font-weight: 700;
 		}
 	}
 }
@@ -818,9 +816,10 @@ footer{
 // CSS For Product Page
 .product-details{
 	background: #EEF0F4;
-  	padding: 10px 0;
+  	padding-top: 60px;
   	.breadcrumb{
     	background: transparent;
+    	padding: 10px 0;
 	    li + li:before {
 	      padding: 0 5px;
 	      color: #ccc;
@@ -831,7 +830,13 @@ footer{
   	.product-info{
     	background: $wcolor;
     	@include box-shadow(0 0 2px #ddd);
-
+		.img-control{
+			margin: 10px 0;
+			img{
+				max-height: 50px;
+				display: inline-block;
+			}
+		}
     	.product-text{
       		.p-name{margin-bottom: 0;}
       		.share-option{
@@ -960,18 +965,24 @@ footer{
   	}
 
   	.related-product{
-    	.rp-header{padding: 10px 0;}
+    	.rp-header{padding: 10px 15px;}
   	}
+}
+
+.zoomLens{
+  width:20px !important;
+  height:20px !important;
 }
 
 // ************************************
 
 // CSS For Cart Page
 .cart {
-	background: #f7f7f7;
+	background: #eaeaea;
+    padding-top: 60px;
 	.cart-header {
-		background: #eaeaea;
-		color: #999;
+		background: #ddd;
+		color: $bcolor;
 		padding: 10px;
 	}
 	.cart-item {
