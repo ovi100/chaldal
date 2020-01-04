@@ -20,8 +20,11 @@ $(document).ready(function() {
     $('.sidenav-toggle-btn').click(function() {
         /* Act on the event */
         $('.sideNav').toggleClass('show-sidemenu');
-        $('.left-content').toggleClass('col-sm-2');
-        $('.right-content').toggleClass('col-sm-10');
+        $('.left-content').toggleClass('col-lg-2 col-md-3');
+        $('.right-content').toggleClass('col-lg-10 col-md-9');
+        $('.hc-content').toggleClass('container');
+        $('.hb-content').toggleClass('container');
+        $('.hp-content').toggleClass('container');
         $('.back-link').toggleClass('container');
         $('.collection').toggleClass('container');
         $('.footer-content').toggleClass('container');
@@ -72,7 +75,7 @@ $(document).ready(function() {
 
     $('.hp-slider').owlCarousel({
         loop:true,
-        margin:12,
+        margin:10,
         dots:false,
         nav:true,
         navText: [
