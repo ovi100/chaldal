@@ -493,16 +493,17 @@ footer{
 	padding: 25px 15px;
 
 	h5{
-		color: $brand-color;
+		color: $bcolor;
 		font-weight: 600;
 	}
 
 	ul{
 		li{
 			a{
-				color: #000;
+				color: $bcolor;
 				font-size: 13px;
 				text-transform: capitalize;
+				&:hover{color: $brand-color;}
 			}
 		}
 	}
@@ -558,6 +559,52 @@ footer{
 			margin-bottom: 0;
 			text-align: right;
 			li{display: inline-block;}
+		}
+	}
+}
+
+.floating-cart-btn{
+	position: fixed;
+    right: 0;
+    top: 50%;
+    height: 85px;
+    width: 85px;
+    background: $wcolor;
+    @include box-shadow(0 0 10px 2px #757575);
+    cursor: pointer;
+    text-align: center;
+    z-index: 20;
+    .cart-icon {
+	    background: #ccc;
+	    color: $brand-color;
+	    font-size: 20px;
+	    padding: 1px;
+	}
+	&:hover{
+		@include box-shadow(0 0 10px 4px #757575);
+		@include transition(all,.4s,ease);
+	}
+}
+
+.floating-cart {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background: $wcolor;
+    @include box-shadow(-2px 5px 10px 2px #ddd);
+    z-index: 50;
+    .cart-header {
+	    padding: 5px 15px;
+	    .item-count{
+	    	i{font-size: 20px;}
+	    }
+	    .close-btn {
+		    border: 1px solid #ccc;
+		    cursor: pointer;
+		    padding: 3px 15px;
+		    text-transform: capitalize;
 		}
 	}
 }
