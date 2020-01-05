@@ -13,16 +13,15 @@ $tablet: '(min-width: 768px) and (max-width: 1024px)';
 
 @include respond-to($phone){
 	// Common CSS
+	body{overflow-x: hidden;}
 	.section-header {
 	    width: 90%;
+	    margin-bottom: 35px;
 	}
 	.sidenav-wrapper{
 		.sideNav{
 			left: -400px;
 			width: 100%;
-			.sideNav-overlay{
-				width: 100%;
-			}
 		}
 	}
 	.header{
@@ -31,7 +30,7 @@ $tablet: '(min-width: 768px) and (max-width: 1024px)';
 
 	.two-col-layout{
 		.right-content{
-			padding-left: 15px;
+			margin-left: 0;
 			#homeCarousel{
 				.carousel-control{display: none;}
 			}
@@ -42,11 +41,33 @@ $tablet: '(min-width: 768px) and (max-width: 1024px)';
 				    .category-name{margin-bottom: 10px;}
 				}
 			}
+			.home-banner{
+				padding-bottom: 10px;
+				.hb-content{
+					img{margin-bottom: 10px;}
+				}
+			}
+			.home-product-slider{
+				.hp-content{
+					.product-thumb-image{
+						display: none;
+						margin-bottom: 5px;
+					}
+				}
+			}
 		}
 	}
 
 	footer{
-		.payment-icon{margin: 10px 0;}
+		.social-media-icon {
+		    padding: 15px 0;
+		}
+		.payment-icon{
+			ul{
+				margin-bottom: 10px;
+			    text-align: center;
+			}
+		}
 		.copy-right-text{text-align: center;}
 	}
 
