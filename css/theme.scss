@@ -225,22 +225,22 @@ a:hover, a:visited, a:focus {
 // Custom CSS For scrollbar
 
 /* width */
-.cart-item::-webkit-scrollbar {
+.cart-body::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Track */
-.cart-item::-webkit-scrollbar-track {
+.cart-body::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
 /* Handle */
-.cart-item::-webkit-scrollbar-thumb {
+.cart-body::-webkit-scrollbar-thumb {
   background: #888; 
 }
 
 /* Handle on hover */
-.cart-item::-webkit-scrollbar-thumb:hover {
+.cart-body::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
 // ********************************
@@ -563,22 +563,35 @@ footer{
 	}
 }
 
+.footer-fixed-nav{
+	position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $wcolor;
+    z-index: 50;
+}
+
 .floating-cart-btn{
 	position: fixed;
     right: 0;
     top: 50%;
-    height: 85px;
-    width: 85px;
+    height: 80px;
+    width: 70px;
     background: $wcolor;
     @include box-shadow(0 0 10px 2px #757575);
     cursor: pointer;
     text-align: center;
     z-index: 20;
-    .cart-icon {
+    .cart-icon{
 	    background: #ccc;
 	    color: $brand-color;
 	    font-size: 20px;
 	    padding: 1px;
+	}
+	.amounts{
+		font-size: 10px;
+	    line-height: 18px;
 	}
 	&:hover{
 		@include box-shadow(0 0 10px 4px #757575);
@@ -586,14 +599,15 @@ footer{
 	}
 }
 
-.floating-cart {
+.floating-cart{
     position: fixed;
     top: 50px;
-    right: 0;
-    width: 320px;
+    right: -800px;
+    width: 370px;
     height: 100%;
     background: $wcolor;
     @include box-shadow(-2px 5px 10px 2px #ddd);
+    @include transition(all,.4s,ease);
     z-index: 50;
     .cart-header {
 	    padding: 5px 15px;
@@ -607,6 +621,89 @@ footer{
 		    text-transform: capitalize;
 		}
 	}
+	.cart-body{
+	    max-height: 485px;
+	    overflow-y: auto;
+		.cart-item{
+			border-bottom: 1px solid #ddd;
+			padding: 10px 15px;
+			.photo{
+				img{margin-top: 15px;}
+			}
+			p{margin-bottom: 0;}
+			.price{
+				height: 60px;
+			    line-height: 60px;
+				font-size: 12px;
+			}
+			.remove-icon{
+				height: 60px;
+			    line-height: 60px;
+			    button{
+			    	background: #fff;
+				    border: 0;
+				    &:hover,&:focus{
+				    	outline: 0;
+				    }
+			    }
+			}
+		}
+		.cart-item:last-child{
+			border-bottom: 0;
+		}
+	}
+	.cart-footer{
+		position: absolute;
+		bottom: 50px;
+	    width: 100%;
+	    background: $wcolor;
+	    border-top: 1px solid #ddd;
+	    padding: 15px 0;
+		text-align: center;
+		a{
+			display: inline-block;
+		}
+		a:first-child{
+			margin-right: -5px;
+			@include opacity(0.5);
+		}
+	}
+	.cart-left-close-btn{
+		position: absolute;
+	    top: 50%;
+	    left: -30px;
+	    background: #ddd;
+	    border-top-left-radius: 3px;
+	    border-bottom-left-radius: 3px;
+	    cursor: pointer;
+	    font-size: 40px;
+	    i{font-size: 30px;}
+	}
+}
+
+.show-floating-cart{
+	right: 0 !important;
+	@include transition(all,.4s,ease);
+}
+
+.mobile-floating-cart{
+    height: 42px;
+    line-height: 42px;
+    margin-left: -15px;
+    i{font-size: 20px;}
+    .cart-count{
+    	position: absolute;
+	    top: 5px;
+	    left: 15px;
+	    width: 15px;
+	    height: 15px;
+	    background: $brand-color;
+	    @include border-radius(50%);
+	    color: $wcolor;
+	    font-size: 12px;
+	    line-height: 15px;
+	    text-align: center;
+    }
 }
 
 // *********************************
