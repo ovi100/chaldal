@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     $('.sidenav-toggle-btn').click(function() {
         /* Act on the event */
-        $('.sideNav').toggleClass('show-sidemenu');
+        //$('.sideNav').toggleClass('show-sidemenu');
         $('.two-col-layout').toggleClass('toggle-content');
         $('.hc-content').toggleClass('container');
         $('.hb-content').toggleClass('container');
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     $('.sideNav-overlay').click(function() {
         /* Act on the event */
-        $('#sideNav').removeClass('show-sidemenu');
+        $('.two-col-layout').toggleClass('toggle-content');
     });
 
     $('.floating-btn').click(function() {

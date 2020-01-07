@@ -6,9 +6,11 @@
     width: 90%;
     margin-bottom: 35px; }
 
-  .sidenav-wrapper .sideNav {
-    left: -400px;
-    width: 100%; }
+  .toggle-content .left-content .sideNav {
+    left: 0 !important; }
+
+  .sideNav {
+    left: -400px; }
 
   .header .action-bar {
     padding: 0 10px; }

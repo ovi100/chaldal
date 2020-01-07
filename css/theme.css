@@ -116,44 +116,34 @@ a:hover, a:visited, a:focus {
 .cart-body::-webkit-scrollbar-thumb:hover {
   background: #555; }
 
-.show-sidemenu {
-  left: 0 !important;
-  z-index: 10 !important;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
-  .show-sidemenu .sideNav-overlay {
-    width: 100% !important; }
-
 .toggle-content {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
-  .toggle-content .left-content {
+  .toggle-content .left-content .sideNav {
     left: -300px !important; }
   .toggle-content .right-content {
     margin-left: 0 !important; }
 
-.sidenav-wrapper .sideNav {
+.sideNav {
   position: fixed;
   top: 50px;
   left: 0;
-  width: 0;
+  width: 215px;
   height: 100%;
-  z-index: 0;
+  border-right: 1px solid #ddd;
+  z-index: 100;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
-  .sidenav-wrapper .sideNav .menu-sidenav {
+  .sideNav .menu-sidenav {
     position: fixed;
     height: 100%;
-    width: 270px;
+    width: 214px;
     background: #fff;
     overflow-x: hidden;
     z-index: 55;
@@ -162,43 +152,46 @@ a:hover, a:visited, a:focus {
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
-    .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link {
+    .sideNav .menu-sidenav .sidenav-menu-link {
       padding-top: 15px; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link ul li {
+      .sideNav .menu-sidenav .sidenav-menu-link ul li {
         margin-bottom: 10px;
-        padding: 0 25px; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link a {
+        padding-left: 25px; }
+      .sideNav .menu-sidenav .sidenav-menu-link a {
         color: #000;
+        font-size: 12px;
+        font-weight: 600;
         text-transform: capitalize;
         -webkit-transition: all 0.4s ease;
         -moz-transition: all 0.4s ease;
         -ms-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease; }
-        .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link a:hover {
+        .sideNav .menu-sidenav .sidenav-menu-link a:hover {
           color: #eb0000; }
-        .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link a span {
+        .sideNav .menu-sidenav .sidenav-menu-link a span {
           color: #000;
           float: right;
-          font-size: 20px;
+          font-size: 15px;
           font-weight: 600;
           line-height: 16px;
+          padding-right: 10px;
           text-align: center; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link #second-category {
-        margin: 10px;
+      .sideNav .menu-sidenav .sidenav-menu-link #second-category {
+        margin-left: 1px;
         border-left: 1px solid #ddd; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-link #third-category {
-        margin: 10px;
+      .sideNav .menu-sidenav .sidenav-menu-link #third-category {
+        margin-left: 1px;
         border-left: 1px solid #ddd; }
-    .sidenav-wrapper .sideNav .menu-sidenav hr {
+    .sideNav .menu-sidenav hr {
       border-top: 1px solid #ddd; }
-    .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-account {
+    .sideNav .menu-sidenav .sidenav-menu-account {
       padding-top: 30px;
       padding-left: 20px;
       padding-right: 20px; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-account ul li {
+      .sideNav .menu-sidenav .sidenav-menu-account ul li {
         margin-bottom: 25px; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-account a {
+      .sideNav .menu-sidenav .sidenav-menu-account a {
         color: #000;
         text-transform: capitalize;
         -webkit-transition: all 0.4s ease;
@@ -206,16 +199,16 @@ a:hover, a:visited, a:focus {
         -ms-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease; }
-        .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-account a:hover {
+        .sideNav .menu-sidenav .sidenav-menu-account a:hover {
           color: #757575; }
-    .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-social {
+    .sideNav .menu-sidenav .sidenav-menu-social {
       padding-top: 30px;
       padding-left: 20px;
       padding-right: 20px; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-social ul li {
+      .sideNav .menu-sidenav .sidenav-menu-social ul li {
         margin-bottom: 25px;
         float: left; }
-      .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-social a {
+      .sideNav .menu-sidenav .sidenav-menu-social a {
         color: #000;
         font-size: 22px;
         margin-right: 20px;
@@ -225,11 +218,11 @@ a:hover, a:visited, a:focus {
         -ms-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease; }
-        .sidenav-wrapper .sideNav .menu-sidenav .sidenav-menu-social a:hover {
+        .sideNav .menu-sidenav .sidenav-menu-social a:hover {
           color: #757575; }
-  .sidenav-wrapper .sideNav .sideNav-overlay {
+  .sideNav .sideNav-overlay {
     position: fixed;
-    width: 0;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0; }
@@ -527,60 +520,7 @@ footer {
   .two-col-layout .container-fluid {
     padding: 0; }
   .two-col-layout .left-content {
-    position: fixed;
-    left: 0;
-    width: 215px;
-    height: 100%;
-    background: #fff;
-    border-right: 1px solid #ddd;
-    z-index: 10;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
-    .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul {
-      margin-bottom: 0; }
-      .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul li {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 25px; }
-        .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul li a {
-          color: #000;
-          text-transform: capitalize;
-          -webkit-transition: all 0.4s ease;
-          -moz-transition: all 0.4s ease;
-          -ms-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
-          transition: all 0.4s ease; }
-          .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul li a:hover {
-            color: #eb0000; }
-          .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul li a span {
-            color: #000;
-            float: right;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 16px;
-            text-align: center; }
-        .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link ul li:hover {
-          /* fallback/image non-cover color */
-          background: #fff;
-          /* Firefox 3.6+ */
-          background: -moz-linear-gradient(left, #fff 5%, #ddd);
-          /* Safari 4+, Chrome 1+ */
-          background: -webkit-gradient(linear, left top, right top, color-stop(5%, #fff), color-stop(, #ddd));
-          /* Safari 5.1+, Chrome 10+ */
-          background: -webkit-linear-gradient(left, #fff 5%, #ddd);
-          /* Opera 11.10+ */
-          background: -o-linear-gradient(left, #fff 5%, #ddd);
-          /* IE10+ */
-          background: -ms-linear-gradient(left, #fff 5%, #ddd);
-          /* Standard */
-          background: linear-gradient(to right, #fff 5%, #ddd);
-          /* IE6-9 */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$sc', endColorstr='$ec',GradientType=1 ); }
-    .two-col-layout .left-content .sideNav .menu-sidenav .sidenav-menu-link hr {
-      margin: 10px 0; }
+    background: #fff; }
   .two-col-layout .right-content {
     margin-left: 215px;
     -webkit-transition: all 0.4s ease;
